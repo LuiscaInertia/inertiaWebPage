@@ -1,0 +1,18 @@
+{
+  "name": "INERTIA",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "*",
+    "compression": "*",
+    "connect-flash": "*",
+    "ejs": "*",
+    "mongoose": "*",
+    "express": "*",
+    "express-session": "*",
+    "method-override": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-google-oauth": "*",
+    "passport-local": "*"
+  }
+}
