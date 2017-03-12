@@ -2,6 +2,5 @@ angular.module('example').controller('ExampleController', ['$scope', '$window', 
   function($scope, $window, $timeout, $location, Authentication) {
     $scope.authentication = Authentication;
 
-
   }
 ]);

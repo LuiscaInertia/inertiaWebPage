@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>AppStrap Bootstrap Theme by Themelize.me</title>
+    <title><%= title %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -68,38 +68,37 @@
                         <div class="row">
                             <div class="col-sm-4 col-md-4">
                                 <h3>
-                                  About Us
+                                  Acerca de Nosotros
                                 </h3>
-                                <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
-                                <a href="about.htm" class="btn btn-sm btn-primary">Find out more</a>
+                                <p><%= shortAboutUs %></p>
+                                <a href="about.htm" class="btn btn-sm btn-primary">Quiero saber más</a>
                             </div>
                             <div class="col-sm-4 col-md-4">
                                 <!--@todo: replace with company contact details-->
                                 <h3>
-                                    Contact Us
+                                    Contáctenos
                                 </h3>
                                 <address>
                                     <p>
                                         <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
-                                        019223 8092344
+                                        <%= phone %>
                                     </p>
                                     <p>
                                         <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
-                                        info@themelize.me
+                                        <%= email %>
                                     </p>
                                     <p>
                                         <abbr title="Address"><i class="fa fa-home"></i></abbr>
-                                        Sunshine House, Sunville. SUN12 8LU.
+                                        <%= address %>
                                     </p>
                                 </address>
                             </div>
                             <div class="col-sm-4 col-md-4">
                                 <div class="colour-switcher">
                                     <h3>
-                                        Theme Colours
+                                        Otros Temas
                                     </h3>
-                                    <a href="#green" class="green active" data-toggle="tooltip" data-placement="bottom" data-original-title="Green (Default)">Green</a> <a href="#red" class="red" data-toggle="tooltip" data-placement="bottom" data-original-title="Red">Red</a> <a href="#blue" class="blue" data-toggle="tooltip" data-placement="bottom" data-original-title="Blue">Blue</a>
-                                    <p>Cookies are NOT enabled so colour selection is not persistent.</p>
+                                    <p>Incluir otros temas.</p>
                                 </div>
                             </div>
                         </div>
@@ -114,10 +113,10 @@
                                 <!--branding/logo-->
                                 <a class="navbar-brand" href="index.htm" title="Home">
                                     <h1>
-                                        <span>App</span>Strap<span>.</span>
+                                        <span><%= title %></span>
                                     </h1>
                                 </a>
-                                <div class="slogan">Responsive HTML Theme</div>
+                                <div class="slogan"><%= slogan %></div>
                             </div>
 
                             <!--header rightside-->
@@ -146,17 +145,17 @@
                         <a class="navbar-btn" data-toggle="jpanel-menu" data-target=".navbar-collapse"> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>
 
                         <!--user menu-->
-                        <div class="btn-group user-menu pull-right"> <a href="#signup-modal" class="btn btn-primary signup" data-toggle="modal">Sign Up</a> <a href="#login-modal" class="btn btn-primary dropdown-toggle login" data-toggle="modal">Login</a> </div>
+                        <div class="btn-group user-menu pull-right"> <a href="#signup-modal" class="btn btn-primary signup" data-toggle="modal">Registrarse</a> <a href="#login-modal" class="btn btn-primary dropdown-toggle login" data-toggle="modal">Iniciar Sesión</a> </div>
 
                         <!--everything within this div is collapsed on mobile-->
                         <div class="navbar-collapse collapse">
                             <!--main navigation-->
                             <ul class="nav navbar-nav">
                                 <li class="home-link">
-                                    <a href="index.htm"><i class="fa fa-home"></i><span class="hidden">Home</span></a>
+                                    <a href="index.htm"><i class="fa fa-home"></i><span class="hidden">Inicio</span></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="features.htm" class="dropdown-toggle menu-item" id="features-drop" data-toggle="dropdown" data-hover="dropdown">Features +</a>
+                                    <a href="features.htm" class="dropdown-toggle menu-item" id="features-drop" data-toggle="dropdown" data-hover="dropdown">Características +</a>
                                     <!-- Dropdown Menu - Mega Menu -->
                                     <ul class="dropdown-menu mega-menu" role="menu" aria-labelledby="features-drop">
                                         <li role="presentation" class="dropdown-header">Mega Menu with links & text items</li>
@@ -188,62 +187,56 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" id="pages-drop" data-toggle="dropdown" data-hover="dropdown">Pages +</a>
+                                    <a href="#" class="dropdown-toggle" id="pages-drop" data-toggle="dropdown" data-hover="dropdown">Páginas +</a>
                                     <!-- Mega Menu -->
                                     <ul class="dropdown-menu" role="menu" aria-labelledby="pages-drop">
                                         <li class="dropdown dropdown-submenu">
-                                            <a href="pricing.htm" class="dropdown-toggle" id="pricing-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Pricing</a>
+                                            <a href="pricing.htm" class="dropdown-toggle" id="pricing-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Precios</a>
                                             <!-- pricing pages -->
                                             <ul class="dropdown-menu" role="menu" aria-labelledby="pricing-drop">
                                                 <li role="presentation">
-                                                    <a role="menuitem" href="pricing.htm" tabindex="-1" class="menu-item">Pricing Plans <i class="new-tag">Updated!</i></a>
+                                                    <a role="menuitem" href="pricing.htm" tabindex="-1" class="menu-item">Planes de Precios</a>
                                                 </li>
                                                 <li role="presentation">
-                                                    <a role="menuitem" href="pricing-tables.htm" tabindex="-1" class="menu-item">Comparison Tables <i class="new-tag">New!</i></a>
+                                                    <a role="menuitem" href="pricing-tables.htm" tabindex="-1" class="menu-item">Tablas de Comparación</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="dropdown dropdown-submenu">
-                                            <a href="timeline.htm" class="dropdown-toggle" id="timeline-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Timeline <i class="new-tag">New!</i></a>
+                                            <a href="timeline.htm" class="dropdown-toggle" id="timeline-drop" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Proyectos</a>
                                             <!-- timelines -->
                                             <ul class="dropdown-menu" role="menu" aria-labelledby="timeline-drop">
-                                                <li role="presentation"><a role="menuitem" href="timeline.htm" tabindex="-1" class="menu-item">Timeline Default</a></li>
-                                                <li role="presentation"><a role="menuitem" href="timeline-left.htm" tabindex="-1" class="menu-item">Timeline Left</a></li>
-                                                <li role="presentation"><a role="menuitem" href="timeline-right.htm" tabindex="-1" class="menu-item">Timeline Right</a></li>
-                                                <li role="presentation"><a role="menuitem" href="timeline-stacked.htm" tabindex="-1" class="menu-item">Timeline Stacked</a></li>
+                                                <li role="presentation"><a role="menuitem" href="timeline.htm" tabindex="-1" class="menu-item">Visión por Computador</a></li>
+                                                <li role="presentation"><a role="menuitem" href="timeline-left.htm" tabindex="-1" class="menu-item">Reconocimiento de Imágenes</a></li>
+                                                <li role="presentation"><a role="menuitem" href="timeline-right.htm" tabindex="-1" class="menu-item">Procesamiento del Lenguaje Natural</a></li>
+                                                <li role="presentation"><a role="menuitem" href="timeline-stacked.htm" tabindex="-1" class="menu-item">Redes Sociales</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="customers.htm" class="menu-item">Customers</a></li>
-                                        <li role="presentation"><a role="menuitem" href="login.htm" tabindex="-1" class="menu-item">Login</a></li>
-                                        <li role="presentation"><a role="menuitem" href="signup.htm" tabindex="-1" class="menu-item">Sign Up</a></li>
-                                        <li role="presentation"><a role="menuitem" href="starter.htm" tabindex="-1" class="menu-item">Starter Snippets</a></li>
-                                        <li role="presentation"><a role="menuitem" href="index-static.htm" tabindex="-1" class="menu-item">Homepage Static Banner</a></li>
-                                        <li role="presentation">
-                                            <a role="menuitem" href="index-boxed.htm" tabindex="-1" class="menu-item">Homepage Boxed <i class="new-tag">New!</i></a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" href="404.htm" tabindex="-1" class="menu-item">404 Error</a></li>
+                                        <li><a href="customers.htm" class="menu-item">Colaboradores y Amigos</a></li>
+                                        <li role="presentation"><a role="menuitem" href="login.htm" tabindex="-1" class="menu-item">Iniciar Sesión</a></li>
+                                        <li role="presentation"><a role="menuitem" href="signup.htm" tabindex="-1" class="menu-item">Registrarse</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="about.htm" class="dropdown-toggle" id="about-drop" data-toggle="dropdown" data-hover="dropdown">About +</a>
+                                    <a href="about.htm" class="dropdown-toggle" id="about-drop" data-toggle="dropdown" data-hover="dropdown">Acerca de +</a>
                                     <!-- Dropdown Menu -->
                                     <ul class="dropdown-menu" role="menu" aria-labelledby="about-drop">
-                                        <li role="presentation"><a role="menuitem" href="about.htm" tabindex="-1" class="menu-item">About Us</a></li>
-                                        <li role="presentation"><a role="menuitem" href="team.htm" tabindex="-1" class="menu-item">Our Team</a></li>
-                                        <li role="presentation"><a role="menuitem" href="contact.htm" tabindex="-1" class="menu-item">Contact</a></li>
+                                        <li role="presentation"><a role="menuitem" href="about.htm" tabindex="-1" class="menu-item">Acerca de Nosostros</a></li>
+                                        <li role="presentation"><a role="menuitem" href="team.htm" tabindex="-1" class="menu-item">Equipo de Trabajo</a></li>
+                                        <li role="presentation"><a role="menuitem" href="contact.htm" tabindex="-1" class="menu-item">Contacto</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="blog.htm" class="dropdown-toggle" id="blog-drop" data-toggle="dropdown" data-hover="dropdown">Blog +</a>
                                     <!-- Dropdown Menu -->
                                     <ul class="dropdown-menu" role="menu" aria-labelledby="blog-drop">
-                                        <li role="presentation"><a role="menuitem" href="blog.htm" tabindex="-1" class="menu-item">Right Sidebar</a></li>
-                                        <li role="presentation"><a role="menuitem" href="blog-leftbar.htm" tabindex="-1" class="menu-item">Left Sidebar</a></li>
-                                        <li role="presentation"><a role="menuitem" href="blog-post.htm" tabindex="-1" class="menu-item">Blog Post</a></li>
+                                        <li role="presentation"><a role="menuitem" href="blog.htm" tabindex="-1" class="menu-item">Inteligencia Artificial</a></li>
+                                        <li role="presentation"><a role="menuitem" href="blog-leftbar.htm" tabindex="-1" class="menu-item">Tecnología</a></li>
+                                        <li role="presentation"><a role="menuitem" href="blog-post.htm" tabindex="-1" class="menu-item">Innovación</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" id="more-drop" data-toggle="dropdown" data-hover="dropdown">More +</a>
+                                    <a href="#" class="dropdown-toggle" id="more-drop" data-toggle="dropdown" data-hover="dropdown">Más +</a>
                                     <!-- Mega Menu -->
                                     <ul class="dropdown-menu" role="menu" aria-labelledby="more-drop">
                                         <li class="dropdown dropdown-submenu">
@@ -287,17 +280,6 @@
         <!-- ======== @Region: #content ======== -->
         <section ng-view></section>
 
-        <!-- ======== @Region: #content-below ======== -->
-        <div id="content-below" class="wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="upsell">
-                        <small class="muted">99.9% Uptime <span class="spacer">//</span> Free upgrade assistence <span class="spacer">//</span> 24/7 Support <span class="spacer">//</span> Plans from $19.99/month <span class="spacer">//</span> </small>
-                        <a href="pricing.htm" class="btn btn-primary">Start your Free Trial Today! <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- FOOTER -->
 
@@ -309,21 +291,21 @@
                         <div class="block contact-block">
                             <!--@todo: replace with company contact details-->
                             <h3>
-                                Contact Us
+                                Contáctanos
                             </h3>
                             <address>
                                 <ul class="fa-ul">
                                     <li>
                                         <abbr title="Phone"><i class="fa fa-li fa-phone"></i></abbr>
-                                        019223 8092344
+                                        <%= phone %> 
                                     </li>
                                     <li>
                                         <abbr title="Email"><i class="fa fa-li fa-envelope"></i></abbr>
-                                        info@appstraptheme.com
+                                        <%= email %>
                                     </li>
                                     <li>
                                         <abbr title="Address"><i class="fa fa-li fa-home"></i></abbr>
-                                        Sunshine House, Sunville. SUN12 8LU.
+                                        <%= address %>
                                     </li>
                                 </ul>
                             </address>
@@ -333,24 +315,24 @@
                     <div class="col-md-5 col">
                         <div class="block">
                             <h3>
-                                About Us
+                                Acerca de Nosotros
                             </h3>
-                            <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+                            <p><%= shortAboutUs %></p>
                         </div>
                     </div>
                     <div class="col-md-4 col">
                         <div class="block newsletter">
                             <h3>
-                                Newsletter
+                                Boletín de Noticias
                             </h3>
-                            <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+                            <p>Mantente al día con nuestras productos y noticias más recientes suscribiéndote a nuestro boletín de noticias.</p>
                             <!--@todo: replace with mailchimp code-->
                             <form role="form">
                                 <div class="input-group input-group-sm">
-                                    <label class="sr-only" for="email-field">Email</label>
-                                    <input type="text" class="form-control" id="email-field" placeholder="Email">
+                                    <label class="sr-only" for="email-field">Correo Electrónico</label>
+                                    <input type="text" class="form-control" id="email-field" placeholder="Correo Electrónico">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-primary" type="button">Go!</button>
+                                        <button class="btn btn-primary" type="button">Ir!</button>
                                     </span>
                                 </div>
                             </form>
@@ -360,18 +342,18 @@
 
                 <div class="row">
                     <div id="toplink">
-                        <a href="#top" class="top-link" title="Back to top">Back To Top <i class="fa fa-chevron-up"></i></a>
+                        <a href="#top" class="top-link" title="Back to top">Volver al Pricipio <i class="fa fa-chevron-up"></i></a>
                     </div>
                     <!--@todo: replace with company copyright details-->
                     <div class="subfooter">
                         <div class="col-md-6">
-                            <p>Site template by <a href="appstraptheme.com">AppStrap</a> | Copyright 2012 &copy; AppStrap</p>
+                            <p>Copyright 2017 &copy; INERTIA SAS</p>
                         </div>
                         <div class="col-md-6">
                             <ul class="list-inline footer-menu">
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Términos</a></li>
+                                <li><a href="#">Privacidad</a></li>
+                                <li><a href="#">Contáctanos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -387,54 +369,54 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title">
-                                Sign Up
+                                Registrarse
                             </h4>
                         </div>
                         <div class="modal-body">
                             <form action="signup.htm" role="form">
                                 <h5>
-                                    Price Plan
+                                    Plan de Precios
                                 </h5>
                                 <select class="form-control">
-                                    <option>Basic</option>
+                                    <option>Basico</option>
                                     <option>Pro</option>
                                     <option>Pro +</option>
                                 </select>
 
                                 <h5>
-                                    Account Information
+                                    Información de Cuenta
                                 </h5>
                                 <div class="form-group">
-                                    <label class="sr-only" for="signup-first-name">First Name</label>
+                                    <label class="sr-only" for="signup-first-name">Nombre</label>
                                     <input type="text" class="form-control" id="signup-first-name" placeholder="First name">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="signup-last-name">Last Name</label>
+                                    <label class="sr-only" for="signup-last-name">Apellido</label>
                                     <input type="text" class="form-control" id="signup-last-name" placeholder="Last name">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="signup-username">Userame</label>
+                                    <label class="sr-only" for="signup-username">Nombre de Usuario</label>
                                     <input type="text" class="form-control" id="signup-username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="signup-email">Email address</label>
+                                    <label class="sr-only" for="signup-email">Correo Electrónico</label>
                                     <input type="email" class="form-control" id="signup-email" placeholder="Email address">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="signup-password">Password</label>
+                                    <label class="sr-only" for="signup-password">Contraseña</label>
                                     <input type="password" class="form-control" id="signup-password" placeholder="Password">
                                 </div>
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" value="term">
-                                        I agree with the Terms and Conditions.
+                                        Estoy de acuerdo con los Términos y Condiciones.
                                     </label>
                                 </div>
-                                <button class="btn btn-primary" type="submit">Sign up</button>
+                                <button class="btn btn-primary" type="submit">Registrarse</button>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <small>Already signed up? <a href="login.htm">Login here</a>.</small>
+                            <small>Ya te encuentras registrado? <a href="login.htm">Inicia sesión aquí</a>.</small>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -450,26 +432,26 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title">
-                                Login
+                                Iniciar Sesión
                             </h4>
                         </div>
                         <div class="modal-body">
                             <form action="login.htm" role="form">
                                 <div class="form-group">
-                                    <label class="sr-only" for="login-email">Email</label>
+                                    <label class="sr-only" for="login-email">Correo Electrónico</label>
                                     <input type="email" id="login-email" class="form-control email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="login-password">Password</label>
+                                    <label class="sr-only" for="login-password">Contraseña</label>
                                     <input type="password" id="login-password" class="form-control password" placeholder="Password">
                                 </div>
-                                <button type="button" class="btn btn-primary">Login</button>
+                                <button type="button" class="btn btn-primary">Iniciar Sesión</button>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <small>Not a member? <a href="#" class="signup">Sign up now!</a></small>
+                            <small>Aún no estás registrado? <a href="#" class="signup">Regístrate ahora!</a></small>
                             <br />
-                            <small><a href="#">Forgotten password?</a></small>
+                            <small><a href="#">Olvidaste tu contraseña?</a></small>
                         </div>
                     </div>
                     <!-- /.modal-content -->
