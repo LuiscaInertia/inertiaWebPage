@@ -1,0 +1,43 @@
+<section ng-controller="PageController">   
+    <!-- ======== @Region: #content ======== -->
+  <div id="content">
+    <div class="container">
+      <!-- Services -->
+      <div class="block features">
+        <h2 class="title-divider">
+          <span>Principales <span class="de-em">Características</span></span>
+          <small>Las principales características vienen incluídas en todos nuestros planes.</small>
+        </h2>
+        <div class="row">
+          <div class="feature col-sm-6 col-md-3" ng-repeat="feature in features">
+            <a href="#!/features">
+              <img src="{{ feature.imgSrc }}" alt="Feature {{$index +1}}" class="img-responsive" />
+            </a>
+            <h3 class="title">
+              <a href="#!/features">{{ feature.feature }}</span></a>
+            </h3>
+            <p>{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+      <!--Customer testimonial-->
+      <div class="block testimonials margin-top-large">
+        <h2 class="title-divider">
+          <span>Altamente <span class="de-em">Recomentados</span></span>
+          <small>99% de nuestros clientes nos recomiendan!</small>
+        </h2>
+        <div class="row">
+          <div class="col-md-4" ng-repeat="clientComment in clientsComments">
+            <blockquote>
+              <p>"{{ clientComment.comment }}"</p>
+              <small>
+                <img src="{{ clientComment.imgSrc }}" alt="{{ clientComment.client }} Bloggs" class="img-circle" />
+                {{ clientComment.client }} Bloggs <span class="spacer">/</span> <a href="{{ clientComment.hrefBlog }}">{{ clientComment.infoBlog }}</a>
+              </small>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -2,7 +2,7 @@
 'use strict';
 
 // Configurar el módulo run de 'example'
-angular.module('example').run(['$rootScope', '$scope', function($rootScope, $scope) {
+angular.module('page').run(['$rootScope', '$scope', function($rootScope, $scope) {
 	// Exponer el service Authentication
     $rootScope.authentication = Authentication;
 	

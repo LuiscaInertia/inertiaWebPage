@@ -1,0 +1,81 @@
+<section ng-controller="PageController">   
+  <!-- ======== @Region: #content ======== -->
+  <div id="content">
+    <div class="container">
+      <!-- Services -->
+      <div class="block features">
+        <h2 class="title-divider">
+          <span>Principales <span class="de-em">Características</span></span>
+          <small>Las principales características vienen incluídas en todos nuestros planes.</small>
+        </h2>
+        <div class="row list-unstyled">
+          <div class="feature col-sm-6 col-md-3" ng-repeat="feature in features">
+            <img src="{{ feature.imgSrc }}" alt="Feature {{$index +1}}" class="img-responsive" />
+            <h3 class="title">
+              <a href="#!/">{{ feature.feature }}</span></a>
+            </h3>
+            <p>{{ feature.description }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Secondary features -->
+          <div class="col-md-9">
+            <h3 class="title-divider">
+              <span><span class="de-em">Características</span> Adicionales</span>
+              <small>Las características adicionales únicamente están incluídas en nuestos planes Pro y Pro +.</small>
+            </h3>
+            <div class="tabbable tabs-left vertical-tabs bold-tabs row">
+              <ul class="nav nav-tabs nav-stacked col-sm-4 col-md-4">
+                <li class="{{($index == 0 ? 'active' :'')}}" ng-repeat="feature in features">
+                  <a href="#tab{{$index+1}}" data-toggle="tab">
+                    {{ feature.feature }}
+                    <small>{{ feature.bonus }} </small>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content col-sm-8 col-md-8">
+                <div class="feature tab-pane {{($index == 0 ? 'active' :'')}} col-sm-12 col-md-12" id="tab{{$index+1}}" ng-repeat="feature in features">
+                  <img src="{{ feature.imgSrc }}" alt="Feature {{$index+1}}" class="img-responsive" />
+                  <h3 class="title visible-phone">
+                    {{ feature.feature }}
+                  </h3>
+                  <!--only show on mobile when tabs are open-->
+                  <div ng-bind-html="feature.bonusDescription"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Contact block-->
+          <div class="col-md-3">
+            <h3 class="title-divider">
+              <span>Preguntas?</span> 
+              <small>Ponte en contacto!</small>
+            </h3>
+            <p>
+              <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
+              {{inertia.phone}}
+            </p>
+            <p>
+              <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
+              {{inertia.email}}
+            </p>
+            <p>
+              <abbr title="Address"><i class="fa fa-home"></i></abbr>
+              {{inertia.address}}
+            </p>
+            <form id="callback-form" action="#" class="bordered-top-medium" role="form">
+              <div class="input-group">
+                <label class="sr-only" for="callback-number">Tu número</label>
+                <input type="tel" class="form-control" id="callback-number" placeholder="Tú número">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Llamar de vuelta</button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

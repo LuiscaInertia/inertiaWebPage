@@ -1,6 +1,6 @@
-var mainApplicationModuleName = 'mean';
+var mainApplicationModuleName = 'inertia';
 
-var mainApplicationModule = angular.module(mainApplicationModuleName, ['ngSanitize','ngResource','ngRoute','users','example']);
+var mainApplicationModule = angular.module(mainApplicationModuleName, ['ngSanitize','ngResource','ngRoute','users','page']);
 
 mainApplicationModule.config(['$locationProvider',
   function($locationProvider) {
